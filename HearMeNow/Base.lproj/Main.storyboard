@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7515.2" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7512"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="HearMeNow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +16,53 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hear me now ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41E-n1-KJV">
+                                <rect key="frame" x="16" y="28" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bU7-vH-0Gv">
+                                <rect key="frame" x="16" y="85" width="568" height="30"/>
+                                <state key="normal" title="Record">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recordPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Adf-WJ-reP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1n-e2-rmP">
+                                <rect key="frame" x="16" y="144" width="568" height="30"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="F9K-UG-VpU"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bU7-vH-0Gv" firstAttribute="leading" secondItem="41E-n1-KJV" secondAttribute="leading" id="59q-Qn-gJh"/>
+                            <constraint firstItem="bU7-vH-0Gv" firstAttribute="leading" secondItem="F1n-e2-rmP" secondAttribute="leading" id="5m6-E1-OO6"/>
+                            <constraint firstItem="bU7-vH-0Gv" firstAttribute="top" secondItem="41E-n1-KJV" secondAttribute="bottom" constant="36" id="6Sk-Vv-W43"/>
+                            <constraint firstItem="F1n-e2-rmP" firstAttribute="trailing" secondItem="bU7-vH-0Gv" secondAttribute="trailing" id="Irq-so-q66"/>
+                            <constraint firstItem="41E-n1-KJV" firstAttribute="trailing" secondItem="bU7-vH-0Gv" secondAttribute="trailing" id="Pzk-gY-J05"/>
+                            <constraint firstItem="41E-n1-KJV" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="SNM-dv-PqM"/>
+                            <constraint firstItem="F1n-e2-rmP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="b0V-xE-5T4"/>
+                            <constraint firstItem="F1n-e2-rmP" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="eCF-Tc-Zsv"/>
+                            <constraint firstItem="F1n-e2-rmP" firstAttribute="top" secondItem="bU7-vH-0Gv" secondAttribute="bottom" constant="29" id="vyg-6y-jl9"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playButton" destination="F1n-e2-rmP" id="oAi-Be-BhY"/>
+                        <outlet property="recordButton" destination="bU7-vH-0Gv" id="Apw-dR-dMH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="636" y="364"/>
         </scene>
     </scenes>
 </document>

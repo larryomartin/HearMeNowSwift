@@ -5,6 +5,7 @@
 //  Created by Lawrence Martin on 2/21/15.
 //  Copyright (c) 2015 Lawrence Martin. All rights reserved.
 //
+//  This is a test program to learn "github".
 
 import UIKit
 import AVFoundation

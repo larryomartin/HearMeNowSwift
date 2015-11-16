@@ -156,6 +156,7 @@
 		8CC7DB391A99A0DD0005764E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Lawrence Martin";
 				TargetAttributes = {
@@ -409,6 +410,7 @@
 				8CC7DB621A99A0DD0005764E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8CC7DB631A99A0DD0005764E /* Build configuration list for PBXNativeTarget "HearMeNowTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +419,7 @@
 				8CC7DB651A99A0DD0005764E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
